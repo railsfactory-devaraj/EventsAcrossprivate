@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EventsAcross</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+		<div class="container-fluid">
+    
+    <!-- show header for non error pages alone -->
+      <% if @show_header %> 
+        <%= react_component('Navbar') %>
+  		<% end %>
+
+      <%= yield %>
+  	</div>
+  </body>
+</html>
